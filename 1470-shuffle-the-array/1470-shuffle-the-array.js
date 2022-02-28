@@ -10,8 +10,8 @@ var shuffle = function(nums, n) {
     let newArray = [];
 
     for (i = 0; i < n; i++) {
-        newArray.push(x[i]);
-        newArray.push(y[i]);
+        newArray.push(x[i],y[i]);
+        // newArray.push(y[i]);
         
 }
     return newArray
