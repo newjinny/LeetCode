@@ -11,7 +11,6 @@ var shuffle = function(nums, n) {
 
     for (i = 0; i < n; i++) {
         newArray.push(x[i],y[i]);
-        // newArray.push(y[i]);
         
 }
     return newArray
