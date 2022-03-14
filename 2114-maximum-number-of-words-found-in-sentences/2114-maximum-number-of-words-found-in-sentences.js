@@ -9,9 +9,10 @@ var mostWordsFound = function(sentences) {
     let word = sentences[i].split(" ").length;
       
      
-    if(res <word ) {
-      res= word;
-    }
+      res = Math.max(res, word)
+    // if(res < word ) {
+    //   res = word;
+    // }
   }
   return res;
 };
