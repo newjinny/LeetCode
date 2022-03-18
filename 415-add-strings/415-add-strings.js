@@ -4,21 +4,34 @@
  * @return {string}
  */
 var addStrings = function(num1, num2) {
-      // return (BigInt(num1)+BigInt(num2)).toString();
-      let carry = 0;
-    let result = [];
-    
-    for(let i = num1.length-1, j = num2.length-1 ; i>=0 || j>=0; i--, j--) { 
-        let sum = getNum(num1[i]) + getNum(num2[j]) + carry;
-        carry = sum > 9 ? 1: 0;
-        result.push(sum % 10);
-    }
-    
-    if(carry > 0) result.push(carry);
-    return result.reverse().join('');
-};
+    // return Math.floor(parseInt(num1)+parseInt(num2)).toString()
+    var result = []
+var lenDif = num1.length - num2.length
+if(lenDif < 0) {
+num1 = num1.padStart(num2.length, '0')
+} else if(lenDif > 0) {
+num2 = num2.padStart(num1.length, '0')
+}
+var move = 0;
+for(var i=num1.length; i>0; i--) {
+var sum = Number(num1.slice(i-1, i)) + Number(num2.slice(i-1, i)) + move
+if(sum >= 10) {
+if(i !== 1) {
+move = 1
+sum = sum.toString().slice(1)
+} else {
+sum = sum.toString()
+}
+} else {
+move = 0
+sum = sum.toString()
+}
+result.splice(0, 0, sum)
+}
+return result.join('')
+}
 
-function getNum(num) {
-    return num ? (num-0) : 0
+
+
  
-};
+ 
