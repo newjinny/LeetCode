@@ -3,7 +3,7 @@
  * @return {string}
  */
 var interpret = function(command) {
-    // return command.replaceAll("()", "o").replaceAll("(al)", "al");
+    return command.replaceAll("()", "o").replaceAll("(al)", "al");
     
-     return command.split('()').join('o').split('(al)').join('al');
+     // return command.split('()').join('o').split('(al)').join('al');
 };
