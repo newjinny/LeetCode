@@ -5,11 +5,11 @@
 var countBits = function(n) {
     let arr = [];
     for(let i=0; i <= n; i++){
-        arr.push(i.toString(2).split('0').join('').length);
+        arr.push(i.toString(2).split("1").length-1);
 
     
     
 }
+console.log(arr)
     return arr
 };
-
