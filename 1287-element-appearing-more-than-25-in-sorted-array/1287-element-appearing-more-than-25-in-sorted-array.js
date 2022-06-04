@@ -7,6 +7,7 @@ var findSpecialInteger = function(arr) {
    arr.map(num => {
        obj[num] = (obj[num] || 0 ) + 1
    })
+ 
     
     for (let num in obj){
         if( obj[num] > arr.length / 4)
