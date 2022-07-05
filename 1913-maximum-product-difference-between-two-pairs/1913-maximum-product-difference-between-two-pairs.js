@@ -3,9 +3,9 @@
  * @return {number}
  */
 var maxProductDifference = function(nums) {
-    let descending = [...nums].sort((a,b) => b - a);
-    let ascending = [...nums].sort((a,b) => a - b);
+    let descendingNum = [...nums].sort((a,b) => b - a);
+    let ascendingNum = [...nums].sort((a,b) => a - b);
     
-    return descending[0] * descending[1] - ascending[0] * ascending[1]
+    return descendingNum[0] * descendingNum[1] - ascendingNum[0] * ascendingNum[1]
     };
 
