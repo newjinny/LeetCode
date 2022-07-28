@@ -5,10 +5,10 @@
  */
 var intersect = function(nums1, nums2) {
     let arr = []
-    nums1.map((num1,i)=>{ 
-        if(nums2.includes(num1)){
-                arr.push(num1)
-                nums2.splice(nums2.indexOf(num1),1)
+    nums1.map((num,i)=>{ 
+        if(nums2.includes(num)){
+                arr.push(num)
+                nums2.splice(nums2.indexOf(num),1)
         }
 
  })
