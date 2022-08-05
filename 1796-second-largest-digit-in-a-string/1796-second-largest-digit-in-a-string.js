@@ -13,6 +13,6 @@ var secondHighest = function(s) {
     
 
 
-  return  arr.length == 1||arr.length ==0 ? -1 : arr[1];
+  return  arr.length == 1 || arr.length == 0 ? -1 : arr[1];
 
 };
