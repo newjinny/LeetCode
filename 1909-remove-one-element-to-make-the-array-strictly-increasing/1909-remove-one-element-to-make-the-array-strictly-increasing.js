@@ -12,5 +12,5 @@ var canBeIncreasing = function(nums) {
                 nums[i] = nums[i-1]
         }
     }
-    return count <= 1 ? true : false
+    return count <= 1 
 };
